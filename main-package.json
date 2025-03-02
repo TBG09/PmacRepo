@@ -6,7 +6,7 @@
         "x86-64": {
           "installerNeeded": true,
           "file": "https://7-zip.org/a/7z2409-x64.exe",
-          "arguments": ""
+          "arguments": "/quiet /norestart"
         },
         "x32": {
           "installerNeeded": true,
@@ -20,9 +20,9 @@
           "file": "https://7-zip.org/a/7z2409-linux-x64.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-x64.tar.xz",
-            "sudo mv 7zz /usr/local/bin/7zz",
-            "sudo chmod +x /usr/local/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc",
+            "sudo mv 7zz /usr/bin/7zz",
+            "sudo chmod +x /usr/bin/7zz",
+            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
             "source ~/.bashrc"
           ]
         },
@@ -31,9 +31,9 @@
           "file": "https://7-zip.org/a/7z2409-linux-x86.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-x86.tar.xz",
-            "sudo mv 7zz /usr/local/bin/7zz",
-            "sudo chmod +x /usr/local/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc",
+            "sudo mv 7zz /usr/bin/7zz",
+            "sudo chmod +x /usr/bin/7zz",
+            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
             "source ~/.bashrc"
           ]
         },
@@ -42,9 +42,9 @@
           "file": "https://7-zip.org/a/7z2409-linux-arm64.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-arm64.tar.xz",
-            "sudo mv 7zz /usr/local/bin/7zz",
-            "sudo chmod +x /usr/local/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc",
+            "sudo mv 7zz /usr/bin/7zz",
+            "sudo chmod +x /usr/bin/7zz",
+            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
             "source ~/.bashrc"
           ]
         },
@@ -53,34 +53,10 @@
           "file": "https://7-zip.org/a/7z2409-linux-arm.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-arm.tar.xz",
-            "sudo mv 7zz /usr/local/bin/7zz",
-            "sudo chmod +x /usr/local/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc",
+            "sudo mv 7zz /usr/bin/7zz",
+            "sudo chmod +x /usr/bin/7zz",
+            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
             "source ~/.bashrc"
-          ]
-        }
-      },
-      "macos": {
-        "arm64": {
-          "installerNeeded": false,
-          "file": "https://7-zip.org/a/7z2409-mac.tar.xz",
-          "post-commands": [
-            "tar -xf 7z2409-mac.tar.xz",
-            "sudo mv 7zz /usr/local/bin/7zz",
-            "sudo chmod +x /usr/local/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/local/bin' >> ~/.zshrc",
-            "source ~/.zshrc"
-          ]
-        },
-        "x86-64": {
-          "installerNeeded": false,
-          "file": "https://7-zip.org/a/7z2409-mac.tar.xz",
-          "post-commands": [
-            "tar -xf 7z2409-mac.tar.xz",
-            "sudo mv 7zz /usr/local/bin/7zz",
-            "sudo chmod +x /usr/local/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/local/bin' >> ~/.zshrc",
-            "source ~/.zshrc"
           ]
         }
       }
