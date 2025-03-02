@@ -1,7 +1,7 @@
 {
   "7zip": {
-    "version": 2409,
     "24.09": {
+      "version": 2409,
       "windows": {
         "x64": {
           "installerNeeded": true,
