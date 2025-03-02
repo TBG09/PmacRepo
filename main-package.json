@@ -5,8 +5,7 @@
       "windows": {
         "x86-64": {
           "installerNeeded": true,
-          "file": "https://7-zip.org/a/7z2409-x64.exe",
-          "arguments": "/quiet /norestart"
+          "file": "https://7-zip.org/a/7z2409-x64.exe"
         },
         "x32": {
           "installerNeeded": true,
