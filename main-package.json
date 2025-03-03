@@ -6,12 +6,18 @@
         "x86-64": {
           "installerNeeded": true,
           "file": "https://7-zip.org/a/7z2409-x64.exe",
-          "arguments": "/quiet /norestart"
+          "arguments": "/quiet /norestart",
+          "uninstall": [
+            "\"C:\\Program Files\\7-Zip\\Uninstall.exe\" /S"
+          ]
         },
         "x32": {
           "installerNeeded": true,
-          "file": "https://7-zip.org/a/7z2409.exe",
-          "arguments": "/quiet /norestart"
+          "file": "https://7-zip.org/a/7z2409.msi",
+          "arguments": "/quiet /norestart",
+          "uninstall": [
+            "\"C:\\Program Files (x86)\\7-Zip\\Uninstall.exe\" /S"
+          ]
         }
       },
       "linux": {
@@ -24,6 +30,13 @@
             "sudo chmod +x /usr/bin/7zz",
             "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
             "source ~/.bashrc"
+          ],
+          "cleanup-commands": [
+            "rm -f 7z2409-linux-x64.tar.xz",
+            "rm -rf 7zz"
+          ],
+          "uninstall": [
+            "sudo rm -f /usr/bin/7zz"
           ]
         },
         "x32": {
@@ -35,28 +48,44 @@
             "sudo chmod +x /usr/bin/7zz",
             "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
             "source ~/.bashrc"
+          ],
+          "cleanup-commands": [
+            "rm -f 7z2409-linux-x86.tar.xz",
+            "rm -rf 7zz"
+          ],
+          "uninstall": [
+            "sudo rm -f /usr/bin/7zz"
+          ]
+        }
+      }
+    }
+  },
+  "python": {
+    "3.13.2": {
+      "version": 3132,
+      "windows": {
+        "x86-64": {
+          "installerNeeded": true,
+          "file": "https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe",
+          "arguments": "/quiet InstallAllUsers=1 PrependPath=1",
+          "uninstall": [
+            "python -m pip uninstall -y python"
+          ]
+        },
+        "x86": {
+          "installerNeeded": true,
+          "file": "https://www.python.org/ftp/python/3.13.2/python-3.13.2.exe",
+          "arguments": "/quiet InstallAllUsers=1 PrependPath=1",
+          "uninstall": [
+            "python -m pip uninstall -y python"
           ]
         },
         "arm64": {
-          "installerNeeded": false,
-          "file": "https://7-zip.org/a/7z2409-linux-arm64.tar.xz",
-          "post-commands": [
-            "tar -xf 7z2409-linux-arm64.tar.xz",
-            "sudo mv 7zz /usr/bin/7zz",
-            "sudo chmod +x /usr/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
-            "source ~/.bashrc"
-          ]
-        },
-        "arm": {
-          "installerNeeded": false,
-          "file": "https://7-zip.org/a/7z2409-linux-arm.tar.xz",
-          "post-commands": [
-            "tar -xf 7z2409-linux-arm.tar.xz",
-            "sudo mv 7zz /usr/bin/7zz",
-            "sudo chmod +x /usr/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
-            "source ~/.bashrc"
+          "installerNeeded": true,
+          "file": "https://www.python.org/ftp/python/3.13.2/python-3.13.2-arm64.exe",
+          "arguments": "/quiet InstallAllUsers=1 PrependPath=1",
+          "uninstall": [
+            "python -m pip uninstall -y python"
           ]
         }
       }
