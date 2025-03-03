@@ -13,7 +13,7 @@
         },
         "x32": {
           "installerNeeded": true,
-          "file": "https://7-zip.org/a/7z2409.msi",
+          "file": "https://7-zip.org/a/7z2409.exe",
           "arguments": "/quiet /norestart",
           "uninstall": [
             "\"C:\\Program Files (x86)\\7-Zip\\Uninstall.exe\" /S"
