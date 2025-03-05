@@ -26,17 +26,17 @@
           "file": "https://7-zip.org/a/7z2409-linux-x64.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-x64.tar.xz",
-            "sudo mv 7zz /usr/bin/7zz",
-            "sudo chmod +x /usr/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
+            "mv 7zz $HOME/.local/bin/7zz",
+            "chmod +x $HOME/.local/bin/7zz",
+            "echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc",
             "source ~/.bashrc"
           ],
           "cleanup-commands": [
             "rm -f 7z2409-linux-x64.tar.xz",
-            "rm -rf 7zz"
+            "rm -rf MANUAL 7zzs History.txt License.txt readme.txt"
           ],
           "uninstall": [
-            "sudo rm -f /usr/bin/7zz"
+            "rm -f $HOME/.local/bin/7zz"
           ]
         },
         "x32": {
@@ -44,17 +44,17 @@
           "file": "https://7-zip.org/a/7z2409-linux-x86.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-x86.tar.xz",
-            "sudo mv 7zz /usr/bin/7zz",
-            "sudo chmod +x /usr/bin/7zz",
-            "echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc",
+            "mv 7zz $HOME/.local/bin/7zz",
+            "chmod +x $HOME/.local/bin/7zz",
+            "echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc",
             "source ~/.bashrc"
           ],
           "cleanup-commands": [
             "rm -f 7z2409-linux-x86.tar.xz",
-            "rm -rf 7zz"
+            "rm -rf MANUAL 7zzs History.txt License.txt readme.txt"
           ],
           "uninstall": [
-            "sudo rm -f /usr/bin/7zz"
+            "rm -f $HOME/.local/bin/7zz"
           ]
         }
       }
