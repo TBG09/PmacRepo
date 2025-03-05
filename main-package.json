@@ -26,8 +26,8 @@
           "file": "https://7-zip.org/a/7z2409-linux-x64.tar.xz",
           "post-commands": [
             "tar -xf 7z2409-linux-x64.tar.xz",
-            "mv 7zz $HOME/.local/bin/7zz",
-            "chmod +x $HOME/.local/bin/7zz",
+            "sudo mv 7zz /usr/bin/7zz",
+            "sudo chmod +x /usr/bin/7zz",
             "echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc",
             "source ~/.bashrc"
           ],
